@@ -13,6 +13,19 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/user', function (Request $request) {
-    return $request->user();
-})->middleware('auth:api');
+// Route::get('/user', function (Request $request) {
+//     return $request->user();
+// })->middleware('auth:api');
+
+Route::get('/admin/wallet/{string}', 'WalletController@show')->middleware('checkHeader');
+
+Route::post('/admin/wallet', 'WalletController@create')->middleware('checkHeader');
+
+Route::delete('/admin/wallet', 'WalletController@destroy')->middleware('checkHeader');
+
+Route::get('/wallet/{string}', 'WalletController@show')->middleware('checkHeader');
+
+Route::post('/transaction/add', 'TransactionController@add')->middleware('checkHeader');
+
+Route::post('/transaction/deduct', 'TransactionController@deduct')->middleware('checkHeader');
+

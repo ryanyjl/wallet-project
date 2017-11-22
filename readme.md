@@ -3,17 +3,17 @@
 # Wallet Project
 
 
-#<u>Setup</u>
+##Setup
 
 1. Update .env with the database credentials at your local machine.
 2. Run `php artisan migrate` to populate data and schema.
 3. Run `php artisan migrate:refresh --seed` for data and schema refresh.
 
-#<u>Frontend</u>
+##Frontend
 
 The frontend can be viewed at http://127.0.0.1:8000
 
-#<u>Admin API endpoints</u>
+#Admin API endpoints
 
 ## Headers
 
@@ -43,7 +43,7 @@ http://127.0.0.1:8000/api/admin/wallet (DELETE)
     	"email": "​ryan@wallet.io"
     }
 
-#<u>Public API endpoints</u>
+#Public API endpoints
 
 ## Headers
 
